@@ -2,16 +2,21 @@
 # TREENODE CLASS
 ######
 
+# Defining the class
+
 
 class TreeNode:
 
+    # Constructor
     def __init__(self, story_piece):
         self.story_piece = story_piece
         self.choices = []
 
+    # Adding a new child
     def add_child(self, node):
         self.choices += [node]
 
+    # Travversing Fn
     def traverse(self):
         story_node = self
         print(story_root.story_piece)
@@ -28,9 +33,6 @@ class TreeNode:
             story_node = chosen_child
 
 
-######
-# VARIABLES FOR TREE
-######
 story_root = TreeNode("""
 You are in a forest clearing. There is a path to the left.
 A bear emerges from the trees and roars!
